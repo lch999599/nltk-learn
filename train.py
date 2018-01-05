@@ -25,7 +25,7 @@ class qiangpiao():
 
     def login(self):
         self.driver.visit(self.login_url)
-        self.driver.fill("loginUserDTO.user_name", "wordgod")
-        self.driver.fill("userDTO.password", "wordgod")
+        self.driver.fill("loginUserDTO.user_name", "user")
+        self.driver.fill("userDTO.password", "pwd")
 
 qiangpiao()
