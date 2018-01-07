@@ -1,6 +1,7 @@
 #coding=utf8
 
 from splinter import Browser
+import time
 
 '''
 http://splinter.readthedocs.io/en/latest/drivers/chrome.html
@@ -20,8 +21,9 @@ https://kyfw.12306.cn/otn/leftTicket/queryA?leftTicketDTO.train_date=2018-02-03&
 class qiangpiao():
     def __init__(self):
         self.login_url = "https://kyfw.12306.cn/otn/login/init"
-        self.driver = Browser(driver_name='chrome', executable_path="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe")
-        # self.login()
+        # self.driver = Browser(driver_name='chrome', executable_path="C:/Program Files (x86)/Google/Chrome/Application/chromedriver.exe")
+        self.driver = Browser(driver_name='chrome', executable_path="/Users/chenchao/Downloads/chromedriver")
+        self.login()
 
     def login(self):
         self.driver.visit(self.login_url)
@@ -29,3 +31,4 @@ class qiangpiao():
         self.driver.fill("userDTO.password", "pwd")
 
 qiangpiao()
+time.sleep(100)
